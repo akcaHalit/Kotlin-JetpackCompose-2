@@ -33,7 +33,26 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Sayfa(){
-    Column (
+    Box(modifier = Modifier
+        .size(200.dp)
+        .background(Color.Red)){
+        Text(text = "Merhaba", modifier = Modifier
+            .align(Alignment.BottomStart))
+    }
+}
+
+
+// Preview'da bu görünür:   Ve bütün Compose'ların en altında olmalı yoksa altında kalan compose yok sayılıyor.
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    JetpackCompose2Theme {
+        Sayfa()
+    }
+}
+
+/*
+Column (
         modifier = Modifier.fillMaxWidth()
             ){
         Box(modifier = Modifier
@@ -65,15 +84,4 @@ fun Sayfa(){
             .background(Color.Yellow)
         )
     }
-
-}
-
-
-// Preview'da bu görünür:   Ve bütün Compose'ların en altında olmalı yoksa altında kalan compose yok sayılıyor.
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    JetpackCompose2Theme {
-        Sayfa()
-    }
-}
+ */
