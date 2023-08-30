@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.halitakca.jetpackcompose2.ui.theme.JetpackCompose2Theme
 
 // Run edince bu görünür:
@@ -33,6 +34,40 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Sayfa(){
+    Column(modifier = Modifier.fillMaxHeight()) {
+        KirmiziKare()
+        Yazi(icerik = "Hello Halit !", yaziBoyutu = 15)
+        MaviKare()
+    }
+
+}
+
+@Composable
+fun KirmiziKare(){
+    Box(modifier = Modifier
+        .size(100.dp)
+        .background(Color.Red))
+}
+@Composable
+fun MaviKare(){
+    Box(modifier = Modifier
+        .size(100.dp)
+        .background(Color.Blue))
+}
+@Composable
+fun Yazi(icerik: String, yaziBoyutu: Int){
+    Text(text = icerik, fontSize = yaziBoyutu.sp)
+}
+// Preview'da bu görünür:   Ve bütün Compose'ların en altında olmalı yoksa altında kalan compose yok sayılıyor.
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    JetpackCompose2Theme {
+        Sayfa()
+    }
+}
+
+/*  Weight Usage
     Row(modifier = Modifier.fillMaxWidth()){
         Box(modifier = Modifier
             .size(100.dp)
@@ -48,17 +83,7 @@ fun Sayfa(){
             .weight(20f))
 //  %50 yellow %30 red %20 blue  on the box view.
     }
-}
-
-
-// Preview'da bu görünür:   Ve bütün Compose'ların en altında olmalı yoksa altında kalan compose yok sayılıyor.
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    JetpackCompose2Theme {
-        Sayfa()
-    }
-}
+ */
 /*  Padding Usage
     Row(modifier = Modifier.fillMaxSize()){
         Box(modifier = Modifier
