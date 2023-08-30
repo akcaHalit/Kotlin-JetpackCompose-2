@@ -32,6 +32,19 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// Bu annotation ile Scaffold kullanabiliyoruz ve hata gidiyor.
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+@Composable
+fun SayfaHata(){
+    Scaffold(
+        topBar = {
+
+        },
+        content = {
+
+        }
+    )
+}
 
 @Composable
 fun Sayfa(){
