@@ -33,15 +33,20 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Sayfa(){
-    Row(modifier = Modifier.fillMaxSize()){
+    Row(modifier = Modifier.fillMaxWidth()){
         Box(modifier = Modifier
             .size(100.dp)
-            .background(Color.Red))
-        Text(text = "HELLO !", modifier = Modifier.padding(10.dp))
-        // start end top bottom
+            .background(Color.Red)
+            .weight(30f))
         Box(modifier = Modifier
             .size(100.dp)
-            .background(Color.Blue))
+            .background(Color.Yellow)
+            .weight(50f))
+        Box(modifier = Modifier
+            .size(100.dp)
+            .background(Color.Blue)
+            .weight(20f))
+//  %50 yellow %30 red %20 blue  on the box view.
     }
 }
 
@@ -54,6 +59,18 @@ fun DefaultPreview() {
         Sayfa()
     }
 }
+/*  Padding Usage
+    Row(modifier = Modifier.fillMaxSize()){
+        Box(modifier = Modifier
+            .size(100.dp)
+            .background(Color.Red))
+        Text(text = "HELLO !", modifier = Modifier.padding(10.dp))
+        // start end top bottom
+        Box(modifier = Modifier
+            .size(100.dp)
+            .background(Color.Blue))
+    }
+ */
 /*  Spacer Usage
     Row{
         Box(modifier = Modifier
