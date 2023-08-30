@@ -33,11 +33,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Sayfa(){
-    Box(modifier = Modifier
-        .size(200.dp)
-        .background(Color.Red)){
-        Text(text = "Merhaba", modifier = Modifier
-            .align(Alignment.BottomStart))
+    Row{
+        Box(modifier = Modifier
+            .size(100.dp)
+            .background(Color.Red))
+        Spacer(modifier = Modifier.size(100.dp).background(Color.Yellow))
+        Box(modifier = Modifier
+            .size(100.dp)
+            .background(Color.Blue))
     }
 }
 
