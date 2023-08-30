@@ -9,6 +9,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Sayfa(){
     Column (
-        verticalArrangement = Arrangement.Center, // Ekranda DİKEY OLARAK CENTER'da olmasını sağladı
+        horizontalAlignment = Alignment.CenterHorizontally, // Ekranda DİKEY OLARAK CENTER'da olmasını sağladı
         modifier = Modifier.fillMaxHeight()
             ){
         Box(modifier = Modifier
@@ -49,26 +50,7 @@ fun Sayfa(){
             .background(Color.Yellow)
         )
     }
-    Row (
-        horizontalArrangement = Arrangement.SpaceEvenly, // Ekranda YATAY OLARAK ARALIKLI olmasını sağladı
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Box(
-            modifier = Modifier
-                .size(80.dp)
-                .background(Color.Red)
-        )
-        Box(
-            modifier = Modifier
-                .size(50.dp)
-                .background(Color.Blue)
-        )
-        Box(
-            modifier = Modifier
-                .size(100.dp)
-                .background(Color.Yellow)
-        )
-    }
+
 }
 
 
