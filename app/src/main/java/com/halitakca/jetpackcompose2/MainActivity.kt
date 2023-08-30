@@ -34,9 +34,24 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Sayfa(){
     Column (
-        horizontalAlignment = Alignment.CenterHorizontally, // Ekranda DİKEY OLARAK CENTER'da olmasını sağladı
-        modifier = Modifier.fillMaxHeight()
+        modifier = Modifier.fillMaxWidth()
             ){
+        Box(modifier = Modifier
+            .size(80.dp)
+            .background(Color.Red)
+        )
+        Box(modifier = Modifier
+            .size(50.dp)
+            .background(Color.Blue)
+        )
+        Box(modifier = Modifier
+            .size(100.dp)
+            .background(Color.Yellow)
+        )
+    }
+    Row (
+        modifier = Modifier.fillMaxHeight()
+    ){
         Box(modifier = Modifier
             .size(80.dp)
             .background(Color.Red)
