@@ -5,6 +5,9 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.res.colorResource
+import com.halitakca.jetpackcompose2.R
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -37,6 +40,9 @@ fun JetpackCompose2Theme(
     } else {
         LightColorPalette
     }
+
+    // Not here to change status bar color
+    // val statusBarColor = colorResource(id = R.color.renk).toArgb()  // toArgb() kullanmalıyız.
 
     MaterialTheme(
         colors = colors,
