@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JetpackCompose2</string>
+    <string name="textYazi">Hello</string>
+    <string name="buttonYazi">NEXT</string>
 </resources>

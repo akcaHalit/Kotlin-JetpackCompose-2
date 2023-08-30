@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JetpackCompose2</string>
+    <string name="textYazi">Merhaba</string>
+    <string name="buttonYazi">İLERLE</string>
+</resources>
